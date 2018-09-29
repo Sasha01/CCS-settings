@@ -1,0 +1,42 @@
+
+/**
+ * main.c
+ */
+
+#include "main.h"
+
+static void timerTest(void);
+
+int main(void)
+{
+    SYSCTL->RCGCGPIO  |= (1U << 5); /* enable Run mode for GPIOF */
+    SYSCTL->GPIOHBCTL |= (1u << 5);
+    GPIOF_AHB->DIR |= (0x0Eu);
+    GPIOF_AHB->DEN |= (0x0Eu);
+
+    timerTest();
+
+    while(1)
+    {
+
+    }
+	return 0;
+}
+
+static void timerTest(void)
+{
+    stGPTimer myTimer;
+    myTimer.mode = gpt_periodic;
+    myTimer.number = gpt_wideTimer1;
+    myTimer.select = gpt_timerA;
+    myTimer.type = gpt_normalTimer;
+    myTimer.loadValue.u32LoadValue = SYS_FREQ;
+
+    GpTimers_init(&myTimer);
+    GpTimers_start(&myTimer);
+}
+
+__attribute__((naked)) void assert_failed (char const *file, int line) {
+    /* TBD: damage control */
+    NVIC_SystemReset(); /* reset the system */
+}

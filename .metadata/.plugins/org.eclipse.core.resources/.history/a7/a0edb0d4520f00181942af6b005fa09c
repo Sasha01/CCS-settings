@@ -1,0 +1,15 @@
+/*
+ * StandardTypes.h
+ *
+ *  Created on: Jan 27, 2018
+ *      Author: Sasha
+ */
+
+#ifndef MODULES_STANDARDTYPES_H_
+#define MODULES_STANDARDTYPES_H_
+#include <string.h>
+
+#define SYS_FREQ (80000000uL)   // 80MHz
+
+
+#endif /* MODULES_STANDARDTYPES_H_ */

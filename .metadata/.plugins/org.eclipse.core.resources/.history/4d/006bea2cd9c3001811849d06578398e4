@@ -1,0 +1,38 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Modules/Warnings.c \
+../Modules/main.c \
+../Modules/startup_tm4c_gnu.c 
+
+C_DEPS += \
+./Modules/Warnings.d \
+./Modules/main.d \
+./Modules/startup_tm4c_gnu.d 
+
+OBJS += \
+./Modules/Warnings.o \
+./Modules/main.o \
+./Modules/startup_tm4c_gnu.o 
+
+OBJS__QUOTED += \
+"Modules\Warnings.o" \
+"Modules\main.o" \
+"Modules\startup_tm4c_gnu.o" 
+
+C_DEPS__QUOTED += \
+"Modules\Warnings.d" \
+"Modules\main.d" \
+"Modules\startup_tm4c_gnu.d" 
+
+C_SRCS__QUOTED += \
+"../Modules/Warnings.c" \
+"../Modules/main.c" \
+"../Modules/startup_tm4c_gnu.c" 
+
+

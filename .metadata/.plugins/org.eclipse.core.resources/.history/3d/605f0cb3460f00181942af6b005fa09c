@@ -1,0 +1,218 @@
+/*
+ * GpTimer.c
+ *
+ *  Created on: Jan 14, 2018
+ *      Author: Sasha
+ */
+#include "GpTimer.h"
+
+static void selectCurrentTimerRegister (stGPTimer* const timer);
+static void setCfg (stGPTimer* const timer);
+static void enableTimerInterrupt(const stGPTimer* const timer);
+static void setTxMR(stGPTimer* const timer);
+static void setCtl(stGPTimer* const timer);
+
+void GpTimers_init(stGPTimer* const timer)
+{
+    selectCurrentTimerRegister(timer);
+    enableTimerInterrupt(timer);
+    memset(timer->reg, 0x00, sizeof(TIMER0_Type));    // clear all registers
+    setCfg(timer);
+    setTxMR(timer);
+    setCtl(timer);
+}
+
+void GpTimers_start(stGPTimer* const timer)
+{
+    if ( (timer->type == gpt_rtcTimer) ||
+         (timer->type == gpt_wideTimer))
+    {
+        if(timer->number <= gpt_timer5)
+        {
+            timer->reg->TAILR = timer->loadValue.u32LoadValue;
+            //timer->reg->TBILR = (timer->loadValue.u32LoadValue >> 16u); // is this necessary???
+        }
+        else
+        {
+            timer->reg->TAILR = (uint32_t)(timer->loadValue.u64LoadValue & 0xFFFFFFFFuLL);
+            timer->reg->TBILR = (uint32_t)(timer->loadValue.u64LoadValue >> 32u);
+        }
+    }
+    else
+    {
+        if(timer->select == gpt_timerA)
+        {
+            timer->reg->TAILR = (timer->loadValue.u16LoadValue)
+        }
+    }
+    // TODO add the rest of the cases to start timers
+}
+
+static void selectCurrentTimerRegister (stGPTimer* const timer)
+{
+    const uint32_t timerBase = 0x40030000uL;
+    timer->reg = (TIMER0_Type *)(timerBase | (timer->number << 12u));
+}
+
+static void setCfg (stGPTimer* const timer)
+{
+    if(timer->type == gpt_normalTimer)
+    {
+        timer->reg->CFG = 4u;
+    }
+    else if (timer->type == gpt_rtcTimer)
+    {
+        timer->reg->CFG = 1u;
+    }
+    else
+    {
+        timer->reg->CFG = 0u;
+    }
+}
+
+static void enableTimerInterrupt(const stGPTimer* const timer)
+{
+    if (timer->number <= gpt_timer5)
+    {
+        SYSCTL->RCGCTIMER |= timer->number;
+    }
+    else
+    {
+        SYSCTL->RCGCWTIMER |= (timer->number - gpt_wideTimer0);
+    }
+
+    if ( (timer->type == gpt_rtcTimer) ||
+         (timer->type == gpt_wideTimer) ||
+        ((timer->type == gpt_normalTimer) && (timer->select == gpt_timerA)))
+    {
+        switch(timer->number)
+        {
+            case gpt_timer0:
+                NVIC_EnableIRQ(TIMER0A_IRQn);
+                break;
+            case gpt_timer1:
+                NVIC_EnableIRQ(TIMER1A_IRQn);
+                break;
+            case gpt_timer2:
+                NVIC_EnableIRQ(TIMER2A_IRQn);
+                break;
+            case gpt_timer3:
+                NVIC_EnableIRQ(TIMER3A_IRQn);
+                break;
+            case gpt_timer4:
+                NVIC_EnableIRQ(TIMER4A_IRQn);
+                break;
+            case gpt_timer5:
+                NVIC_EnableIRQ(TIMER5A_IRQn);
+                break;
+            case gpt_wideTimer0:
+                NVIC_EnableIRQ(WTIMER0A_IRQn);
+                break;
+            case gpt_wideTimer1:
+                NVIC_EnableIRQ(WTIMER1A_IRQn);
+                break;
+            case gpt_wideTimer2:
+                NVIC_EnableIRQ(WTIMER2A_IRQn);
+                break;
+            case gpt_wideTimer3:
+                NVIC_EnableIRQ(WTIMER3A_IRQn);
+                break;
+            case gpt_wideTimer4:
+                NVIC_EnableIRQ(WTIMER4A_IRQn);
+                break;
+            case gpt_wideTimer5:
+                NVIC_EnableIRQ(WTIMER5A_IRQn);
+                break;
+            default:
+                NVIC_SystemReset();
+                break;
+        }
+    }
+    else if ((timer->type == gpt_normalTimer) && (timer->select == gpt_timerB))
+    {
+        switch(timer->number)
+        {
+            case gpt_timer0:
+                NVIC_EnableIRQ(TIMER0B_IRQn);
+                break;
+            case gpt_timer1:
+                NVIC_EnableIRQ(TIMER1B_IRQn);
+                break;
+            case gpt_timer2:
+                NVIC_EnableIRQ(TIMER2B_IRQn);
+                break;
+            case gpt_timer3:
+                NVIC_EnableIRQ(TIMER3B_IRQn);
+                break;
+            case gpt_timer4:
+                NVIC_EnableIRQ(TIMER4B_IRQn);
+                break;
+            case gpt_timer5:
+                NVIC_EnableIRQ(TIMER5B_IRQn);
+                break;
+            case gpt_wideTimer0:
+                NVIC_EnableIRQ(WTIMER0B_IRQn);
+                break;
+            case gpt_wideTimer1:
+                NVIC_EnableIRQ(WTIMER1B_IRQn);
+                break;
+            case gpt_wideTimer2:
+                NVIC_EnableIRQ(WTIMER2B_IRQn);
+                break;
+            case gpt_wideTimer3:
+                NVIC_EnableIRQ(WTIMER3B_IRQn);
+                break;
+            case gpt_wideTimer4:
+                NVIC_EnableIRQ(WTIMER4B_IRQn);
+                break;
+            case gpt_wideTimer5:
+                NVIC_EnableIRQ(WTIMER5B_IRQn);
+                break;
+            default:
+                NVIC_SystemReset();
+                break;
+        }
+    }
+    else
+    {
+        NVIC_SystemReset();
+    }
+}
+
+static void setTxMR(stGPTimer* const timer)
+{
+    if(timer->select == gpt_timerA)
+    {
+        if (timer->mode == gpt_singleShot)
+        {
+            timer->reg->TAMR |= 1u;
+        }
+        else    // periodic mode
+        {
+            timer->reg->TAMR |= (1 << 1u);
+        }
+    }
+    else    // timer B
+    {
+        if (timer->mode == gpt_singleShot)
+        {
+            timer->reg->TBMR |= 1u;
+        }
+        else    // periodic mode
+        {
+            timer->reg->TBMR |= (1 << 1u);
+        }
+    }
+}
+
+static void setCtl(stGPTimer* const timer)
+{
+    if(timer->select == gpt_timerA)
+    {
+        timer->reg->CTL |= (1 << 1u);
+    }
+    else    // timer B
+    {
+        timer->reg->CTL |= (1 << 9u);
+    }
+}

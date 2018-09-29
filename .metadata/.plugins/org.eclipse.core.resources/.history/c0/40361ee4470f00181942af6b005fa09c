@@ -1,0 +1,65 @@
+/*
+ * GpTimer.h
+ *
+ * DESCRIPTION:
+ *  Configure and handle the General Purpose Timers
+ *
+ *  Created on: Jan 14, 2018
+ *      Author: Sasha
+ */
+
+#ifndef MODULES_HAL_GPTIMER_H_
+#define MODULES_HAL_GPTIMER_H_
+
+#include "../TM4C123GH6PM.h"
+#include "../StandardTypes.h"
+
+typedef enum {
+    gpt_timer0,
+    gpt_timer1,
+    gpt_timer2,
+    gpt_timer3,
+    gpt_timer4,
+    gpt_timer5,
+    gpt_wideTimer0,
+    gpt_wideTimer1,
+    gpt_wideTimer2,
+    gpt_wideTimer3,
+    gpt_wideTimer4,
+    gpt_wideTimer5
+}GPT_number;
+
+typedef enum {
+    gpt_normalTimer,    // selects the 16/32bit timers
+    gpt_wideTimer,      // selects the 32/64bit timers
+    gpt_rtcTimer        // select the RealTimeClock mode
+}GPT_type;
+
+typedef enum {
+    gpt_timerA,
+    gpt_timerB          // if GPT_type == gpt_normalTimer, it works independently from timerA; otherwise, no effect
+}GPT_select;
+
+typedef enum {
+    gpt_singleShot,
+    gpt_periodic
+}GPT_mode;
+
+
+typedef struct {
+    TIMER0_Type *reg;   // do not set manually, will be set based on the other fields
+    GPT_type type;
+    GPT_number number;
+    GPT_select select;
+    GPT_mode mode;
+    union {
+        uint16_t u16LoadValue;
+        uint32_t u32LoadValue;
+        uint64_t u64LoadValue;
+    }loadValue;
+
+}stGPTimer;
+
+void GpTimers_init(stGPTimer* const timer);
+
+#endif /* MODULES_HAL_GPTIMER_H_ */

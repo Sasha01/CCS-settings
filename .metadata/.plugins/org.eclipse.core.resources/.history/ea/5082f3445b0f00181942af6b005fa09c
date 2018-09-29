@@ -1,0 +1,16 @@
+/*
+ * GpTimerIrq.h
+ *
+ *  Created on: Feb 11, 2018
+ *      Author: Sasha
+ */
+
+#ifndef MODULES_HAL_GPTIMERIRQ_H_
+#define MODULES_HAL_GPTIMERIRQ_H_
+
+#include "../TM4C123GH6PM.h"
+#include "../main.h"
+#include "GpTimer.h"
+
+
+#endif /* MODULES_HAL_GPTIMERIRQ_H_ */

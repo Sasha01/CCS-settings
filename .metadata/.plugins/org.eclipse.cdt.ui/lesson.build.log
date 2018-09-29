@@ -1,0 +1,47 @@
+
+**** Build of configuration Debug for project lesson ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k all 
+ 
+'Building file: "../Modules/HwIface/GpTimers.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/GpTimers.d" -MT"Modules/HwIface/GpTimers.o"  -o"Modules/HwIface/GpTimers.o" "../Modules/HwIface/GpTimers.c"
+'Finished building: "../Modules/HwIface/GpTimers.c"'
+ 
+'Building file: "../Modules/HwIface/PWM.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/PWM.d" -MT"Modules/HwIface/PWM.o"  -o"Modules/HwIface/PWM.o" "../Modules/HwIface/PWM.c"
+'Finished building: "../Modules/HwIface/PWM.c"'
+ 
+'Building file: "../Modules/HwIface/SysTick.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/SysTick.d" -MT"Modules/HwIface/SysTick.o"  -o"Modules/HwIface/SysTick.o" "../Modules/HwIface/SysTick.c"
+'Finished building: "../Modules/HwIface/SysTick.c"'
+ 
+'Building file: "../Modules/HwIface/Watchdog.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/Watchdog.d" -MT"Modules/HwIface/Watchdog.o"  -o"Modules/HwIface/Watchdog.o" "../Modules/HwIface/Watchdog.c"
+'Finished building: "../Modules/HwIface/Watchdog.c"'
+ 
+'Building file: "../Modules/HwIface/bsp.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/bsp.d" -MT"Modules/HwIface/bsp.o"  -o"Modules/HwIface/bsp.o" "../Modules/HwIface/bsp.c"
+'Finished building: "../Modules/HwIface/bsp.c"'
+ 
+'Building file: "../Modules/HwIface/startup_tm4c_gnu.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/HwIface/startup_tm4c_gnu.d" -MT"Modules/HwIface/startup_tm4c_gnu.o"  -o"Modules/HwIface/startup_tm4c_gnu.o" "../Modules/HwIface/startup_tm4c_gnu.c"
+'Finished building: "../Modules/HwIface/startup_tm4c_gnu.c"'
+ 
+'Building file: "../Modules/OS/main.c"'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -I"C:/Users/Sasha/Documents/Embedded Programming/CMSIS/Include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -c -MMD -MP -MF"Modules/OS/main.d" -MT"Modules/OS/main.o"  -o"Modules/OS/main.o" "../Modules/OS/main.c"
+'Finished building: "../Modules/OS/main.c"'
+ 
+'Building target: "lesson.out"'
+'Invoking: GNU Linker'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -MD -std=c99 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"lesson.map" -o"lesson.out" "./Modules/HwIface/GpTimers.o" "./Modules/HwIface/PWM.o" "./Modules/HwIface/SysTick.o" "./Modules/HwIface/Watchdog.o" "./Modules/HwIface/bsp.o" "./Modules/HwIface/startup_tm4c_gnu.o" "./Modules/OS/main.o" -Wl,-T"../tm4c123gh6pm.lds"  -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group 
+'Finished building target: "lesson.out"'
+ 
+
+**** Build Finished ****

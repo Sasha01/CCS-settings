@@ -1,0 +1,16 @@
+/*
+ * StandardTypes.h
+ *
+ *  Created on: Jan 27, 2018
+ *      Author: Sasha
+ */
+
+#ifndef MODULES_STANDARDTYPES_H_
+#define MODULES_STANDARDTYPES_H_
+#include <string.h>
+
+#define SYS_FREQ (16000000uL)   // 16MHz
+stGPTimer myTimer, myTimer2, myTimer3;  //TODO: move these
+
+
+#endif /* MODULES_STANDARDTYPES_H_ */

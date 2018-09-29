@@ -1,0 +1,159 @@
+
+**** Build of configuration Debug for project TIVA C ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+'Building file: "../Modules/Extern/startup_tm4c_gnu.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Sasha/workspace_v7/TIVA C" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/Users/Sasha/workspace_v7/TIVA C/Modules/Extern/CMSIS/Include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Modules/Extern/startup_tm4c_gnu.d_raw" --obj_directory="Modules/Extern"  "../Modules/Extern/startup_tm4c_gnu.c"
+41 Assembly Errors, 6 Assembly Warnings
+
+>> Compilation failure
+Modules/Extern/subdir_rules.mk:9: recipe for target 'Modules/Extern/startup_tm4c_gnu.obj' failed
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 752: [E0200] Bad term in expression
+	    ldr r0,=str_nmi
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 752: [E0001] Illegal symbol
+	    ldr r0,=str_nmi
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 752: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_nmi
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 755: [W0004] Invalid instruction modifier(s) ignored
+		str_nmi: .asciz "NMI"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 755: [E0200] Bad term in expression
+		str_nmi: .asciz "NMI"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 755: [E0001] Illegal symbol
+		str_nmi: .asciz "NMI"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 755: [E0003] Unexpected trailing operand(s)
+		str_nmi: .asciz "NMI"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 783: [E1500] DWARF syntax error:  address values within a line sequence may not decrease; ignoring request to add line number entry
+		.dwpsn	file "../Modules/Extern/startup_tm4c_gnu.c",line 411,column 30,is_stmt,address MemManage_Handler,isa 1
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 796: [E0200] Bad term in expression
+	    ldr r0,=str_mem
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 796: [E0001] Illegal symbol
+	    ldr r0,=str_mem
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 796: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_mem
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 799: [W0004] Invalid instruction modifier(s) ignored
+		str_mem: .asciz "MemManage"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 799: [E0200] Bad term in expression
+		str_mem: .asciz "MemManage"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 799: [E0001] Illegal symbol
+		str_mem: .asciz "MemManage"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 799: [E0003] Unexpected trailing operand(s)
+		str_mem: .asciz "MemManage"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 827: [E1500] DWARF syntax error:  address values within a line sequence may not decrease; ignoring request to add line number entry
+		.dwpsn	file "../Modules/Extern/startup_tm4c_gnu.c",line 422,column 30,is_stmt,address HardFault_Handler,isa 1
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 840: [E0200] Bad term in expression
+	    ldr r0,=str_hrd
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 840: [E0001] Illegal symbol
+	    ldr r0,=str_hrd
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 840: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_hrd
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 843: [W0004] Invalid instruction modifier(s) ignored
+		str_hrd: .asciz "HardFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 843: [E0200] Bad term in expression
+		str_hrd: .asciz "HardFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 843: [E0001] Illegal symbol
+		str_hrd: .asciz "HardFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 843: [E0003] Unexpected trailing operand(s)
+		str_hrd: .asciz "HardFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 871: [E1500] DWARF syntax error:  address values within a line sequence may not decrease; ignoring request to add line number entry
+		.dwpsn	file "../Modules/Extern/startup_tm4c_gnu.c",line 433,column 29,is_stmt,address BusFault_Handler,isa 1
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 884: [E0200] Bad term in expression
+	    ldr r0,=str_bus
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 884: [E0001] Illegal symbol
+	    ldr r0,=str_bus
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 884: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_bus
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 887: [W0004] Invalid instruction modifier(s) ignored
+		str_bus: .asciz "BusFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 887: [E0200] Bad term in expression
+		str_bus: .asciz "BusFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 887: [E0001] Illegal symbol
+		str_bus: .asciz "BusFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 887: [E0003] Unexpected trailing operand(s)
+		str_bus: .asciz "BusFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 915: [E1500] DWARF syntax error:  address values within a line sequence may not decrease; ignoring request to add line number entry
+		.dwpsn	file "../Modules/Extern/startup_tm4c_gnu.c",line 444,column 31,is_stmt,address UsageFault_Handler,isa 1
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 928: [E0200] Bad term in expression
+	    ldr r0,=str_usage
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 928: [E0001] Illegal symbol
+	    ldr r0,=str_usage
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 928: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_usage
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 931: [W0004] Invalid instruction modifier(s) ignored
+		str_usage: .asciz "UsageFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 931: [E0200] Bad term in expression
+		str_usage: .asciz "UsageFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 931: [E0001] Illegal symbol
+		str_usage: .asciz "UsageFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 931: [E0003] Unexpected trailing operand(s)
+		str_usage: .asciz "UsageFault"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 959: [E1500] DWARF syntax error:  address values within a line sequence may not decrease; ignoring request to add line number entry
+		.dwpsn	file "../Modules/Extern/startup_tm4c_gnu.c",line 456,column 28,is_stmt,address Default_Handler,isa 1
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 972: [E0200] Bad term in expression
+	    ldr r0,=str_dflt
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 972: [E0001] Illegal symbol
+	    ldr r0,=str_dflt
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 972: [E0003] Unexpected trailing operand(s)
+	    ldr r0,=str_dflt
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", WARNING! at line 975: [W0004] Invalid instruction modifier(s) ignored
+		str_dflt: .asciz "Default"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 975: [E0200] Bad term in expression
+		str_dflt: .asciz "Default"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 975: [E0001] Illegal symbol
+		str_dflt: .asciz "Default"
+
+"C:\Users\Sasha\AppData\Local\Temp\{9974366B-2742-4745-9C47-40C1302D2C36}", ERROR!   at line 975: [E0003] Unexpected trailing operand(s)
+		str_dflt: .asciz "Default"
+
+
+Errors in Source - Assembler Aborted
+gmake: *** [Modules/Extern/startup_tm4c_gnu.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

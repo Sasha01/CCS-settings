@@ -1,0 +1,29 @@
+/*
+ * GpTimerIrq.c
+ *
+ *  Created on: Feb 11, 2018
+ *      Author: Sasha
+ */
+
+#include "GpTimerIrq.h"
+
+void WideTimer1A_IRQHandler(void)
+{
+    GPIOF_AHB->DATA ^= (1u << 3);
+    WTIMER1->ICR |= 0x1fu; // do I need to set all 5 bits???
+    GpTimers_start(&myTimer2);
+}
+
+void WideTimer2A_IRQHandler(void)
+{
+    GPIOF_AHB->DATA ^= (1u << 2);
+    WTIMER1->ICR |= 0x1fu; // do I need to set all 5 bits???
+    GpTimers_start(&myTimer3);
+}
+
+void WideTimer3A_IRQHandler(void)
+{
+    GPIOF_AHB->DATA ^= (1u << 1);
+    WTIMER1->ICR |= 0x1fu; // do I need to set all 5 bits???
+    GpTimers_start(&myTimer);
+}

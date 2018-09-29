@@ -1,0 +1,38 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Modules/Drivers/GpTimer.c \
+../Modules/Drivers/Gpio.c \
+../Modules/Drivers/Uart.c 
+
+C_DEPS += \
+./Modules/Drivers/GpTimer.d \
+./Modules/Drivers/Gpio.d \
+./Modules/Drivers/Uart.d 
+
+OBJS += \
+./Modules/Drivers/GpTimer.obj \
+./Modules/Drivers/Gpio.obj \
+./Modules/Drivers/Uart.obj 
+
+OBJS__QUOTED += \
+"Modules\Drivers\GpTimer.obj" \
+"Modules\Drivers\Gpio.obj" \
+"Modules\Drivers\Uart.obj" 
+
+C_DEPS__QUOTED += \
+"Modules\Drivers\GpTimer.d" \
+"Modules\Drivers\Gpio.d" \
+"Modules\Drivers\Uart.d" 
+
+C_SRCS__QUOTED += \
+"../Modules/Drivers/GpTimer.c" \
+"../Modules/Drivers/Gpio.c" \
+"../Modules/Drivers/Uart.c" 
+
+
